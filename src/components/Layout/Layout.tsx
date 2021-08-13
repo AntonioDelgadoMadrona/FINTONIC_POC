@@ -9,7 +9,6 @@ import { Navbar } from "../Navbar/Navbar";
 import { Layout as Container, Wrapper } from "./styled";
 
 const Layout = memo((props) => {
-
   const { pathname } = useLocation();
 
   return (
@@ -18,7 +17,6 @@ const Layout = memo((props) => {
       <Wrapper path={pathname}>{props.children}</Wrapper>
     </Container>
   );
-}
-);
+});
 
 export { Layout };

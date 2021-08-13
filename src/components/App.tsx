@@ -1,33 +1,31 @@
 // DEPENDENCIES
-import React from 'react';
+import React, { FC } from "react";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
-import { createBrowserHistory } from 'history';
 
 // COMPONENTS
 import { Layout } from "./Layout/Layout";
-import { BrowseQuestions } from './BrowseQuestions/BrowseQuestions';
+import BrowseQuestions from "./BrowseQuestions/BrowseQuestions";
 
 // STYLE
-import './App.css';
+import "./App.css";
 
-const App = () => {
+interface IProps {
+  history: any;
+}
+
+const App: FC<IProps> = ({ history }) => {
   return (
     <div>
-      <Router history={createBrowserHistory()}>
+      <Router history={history}>
         <Layout>
           <Switch>
-            <Route
-              exact
-              path="/"
-              component={BrowseQuestions}
-            />
+            <Route exact path="/" component={BrowseQuestions} />
             <Redirect to="/" />
           </Switch>
         </Layout>
-
       </Router>
     </div>
   );
-}
+};
 
-export default App;
+export { App };

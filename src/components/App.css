@@ -9,7 +9,7 @@ body {
   width: 100%;
   background-color: #383e4e;
   color: #fff;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 @media screen and (max-width: 574px) {
   html {

@@ -7,7 +7,13 @@ import { StyledNavbar, ImgContainer, LinksContainer } from "./styled";
 // IMAGES
 import logo from "../../images/logo-banner.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faCogs, faComments, faPlus, faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faCogs,
+  faComments,
+  faPlus,
+  faSignInAlt,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = memo(() => {
   return (

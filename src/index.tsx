@@ -1,12 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
+// DEPENDENCIES
+import React from "react";
+import ReactDOM from "react-dom";
+
+// REDUX
+import { Provider } from "react-redux";
+import configureStore from "./redux/configureStore";
+
+// COMPONENTS
+import { App } from "./components/App";
+
 import reportWebVitals from './reportWebVitals';
 
+// CONFIGURE STORE
+import { createBrowserHistory } from 'history';
+const history = createBrowserHistory();
+const store = configureStore({}, history);
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <App history={history} />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
